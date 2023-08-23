@@ -39,6 +39,10 @@ class PrisonersDilemmaGame:
             print(f"Round {i+1}:")
             print(f"{self.agent1.name} chose {decision1}, {self.agent2.name} chose {decision2}")
             print(f"Payoffs -> {self.agent1.name}: {payoff1}, {self.agent2.name}: {payoff2}")
+            self.agent1.update_tom(history)
+            self.agent2.update_tom(history)
+            print(f"Theory of Mind for {self.agent1.name}: {self.agent1.tom}")
+            print(f"Theory of Mind for {self.agent2.name}: {self.agent2.tom}")
             print("------")
             time.sleep(1)
 
@@ -78,8 +82,8 @@ class AlwaysDefectAgent(Agent):
 
 if __name__ == '__main__':
     # No need for AgentConfig as it's not used in the simplified LLMAgent
-    agent1 = LLMAgent('Alice')
-    agent2 = LLMAgent('Bob')
+    agent1 = LLMAgent('Alice', 'Player 1')
+    agent2 = LLMAgent('Bob', 'Player 2')
 
     game = PrisonersDilemmaGame(agent1, agent2, iterations=10)
     
