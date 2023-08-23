@@ -1,0 +1,10 @@
+In the classic two-player game of Prisoner's Dilemma, you and your opponent have been apprehended for a crime and are kept in separate cells. You both have the same two options:
+
+Cooperate (C): Remain silent and cooperate with your partner.
+Defect (D): Betray your partner by confessing to the crime.
+Here's how the payoffs work based on the combination of choices:
+
+C-C: Both of you cooperate: Each of you gets 3 years in prison.
+C-D: You cooperate but your opponent defects: You get 5 years, and your opponent goes free.
+D-C: You defect but your opponent cooperates: You go free, and your opponent gets 5 years.
+D-D: Both of you defect: Each of you gets 1 year in prison.
